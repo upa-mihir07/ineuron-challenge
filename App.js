@@ -1,6 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import * as React from "react";
-import { Button, View, Text } from "react-native";
+import { View, Text } from "react-native";
+
+import {
+    Button,
+    useColorMode,
+    useColorModeValue,
+    NativeBaseProvider,
+} from "native-base";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
