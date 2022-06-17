@@ -56,16 +56,16 @@ const data=[
 
 ]
 
-const renderItem = ({item}) => {
-    return <OnePortfolio name={item.name} returns={item.returns} current_value={item.current_value} investment={item.investment}/>
+const renderItem = (item, colorr) => {
+    return <OnePortfolio name={item.name} returns={item.returns} current_value={item.current_value} investment={item.investment} colorr={colorr}/>
 }
 
-const AllPortfolio = () => {
+const AllPortfolio = ({colorr}) => {
 
     return(
             <FlatList 
                 data={data}
-                renderItem={renderItem}
+                renderItem={({item}) => renderItem(item, colorr)}
                 keyExtractor={ item => item.id}
                 showsVerticalScrollIndicator={false}
                 contentInset={{ right: 20, top: 0, left: 0, bottom: 0 }}
