@@ -49,24 +49,7 @@ const data=[
 
 const renderItem = ({item}) => {
     if(item.type === 'MaterialCommunityIcons'){
-        if(item.value === 'Language'){
-            return <Button alignItems="center" >
-            <Box width="100%" rounded="sm" overflow="hidden" borderColor="coolGray.200" borderWidth="1" bgColor={"white"}>
-                <Stack p="4" space={3}>
-                    <HStack alignItems="center" space={4} justifyContent="flex-start">
-                        <Box>
-                           <MaterialCommunityIcons name={item.name} size={24} color="black" />
-                        </Box>
-                        <Box justifyContent="space-between">
-                           <Text>{item.value}</Text>
-                           <Text>{item.default}</Text>
-                        </Box>
-                    </HStack>
-                </Stack>
-            </Box>
-        </Button>
-        }else{
-            return <Box alignItems="center" >
+         return <Box alignItems="center" >
         <Box width="100%" rounded="sm" overflow="hidden" borderColor="coolGray.100" borderWidth="1" bgColor={"white"}>
             <Stack p="4" space={3}>
                 <HStack alignItems="center" space={4} justifyContent="flex-start">
@@ -80,9 +63,26 @@ const renderItem = ({item}) => {
             </Stack>
         </Box>
     </Box>
-        }
+        
     }
     if(item.type === 'MaterialIcons'){
+        if(item.value === 'Language'){
+            return <Box alignItems="center" >
+            <Box width="100%" rounded="sm" overflow="hidden" borderColor="coolGray.200" borderWidth="1" bgColor={"white"}>
+                <Stack p="4" space={3}>
+                    <HStack alignItems="center" space={4} justifyContent="flex-start">
+                        <Box>
+                           <MaterialIcons name={item.name} size={24} color="black" />
+                        </Box>
+                        <Box flexDirection="row">
+                            <Text>{item.value}</Text>
+                            <Text mx="41%">{item.default}</Text>
+                        </Box>
+                    </HStack>
+                </Stack>
+            </Box>
+        </Box>
+        }else{
         return <Box alignItems="center" >
         <Box width="100%" rounded="sm" overflow="hidden" borderColor="coolGray.100" borderWidth="1" bgColor={"white"}>
             <Stack p="4" space={3}>
@@ -98,6 +98,7 @@ const renderItem = ({item}) => {
         </Box>
     </Box>
     }
+}
 }
 
 const settings = () => {
