@@ -15,7 +15,7 @@ export default function OrderTimeline( {timelineobj} ){
                 </Box>
             </Box>
             <Text marginLeft="-60%" marginTop="-1%" fontWeight="510" fontSize="14px" color="#1F2937">Order Placed</Text>
-            <Text marginLeft="-10%" marginBottom="0%" marginTop="1.5%" fontWeight="400" fontSize="12px" color="#6B7280">{timelineobj.order_placed.desc_text}</Text>
+            <Text marginLeft="-10%"  marginTop="1.5%" fontWeight="400" fontSize="12px" color="#6B7280">{timelineobj.order_placed.desc_text}</Text>
             <Text marginLeft="-73%" marginBottom="14.5%" fontWeight="400" fontSize="12px" color="#6B7280">{timelineobj.order_placed.time}</Text>
         </Center>
         <Center w="90%" h="20" bg="#fff" height="auto"  borderLeftColor="#4C1D95"  borderLeftWidth="1px" marginTop="13.28px" >
@@ -29,8 +29,8 @@ export default function OrderTimeline( {timelineobj} ){
                     </AspectRatio>
                 </Box>
             </Box>
-            <Text marginLeft="-60%" marginTop="-5.8%"  marginBottom="0%" fontWeight="510" fontSize="14px" color="#1F2937">Order Packed</Text>
-            <Text marginLeft="7%" marginBottom="0%" marginTop="1.5%" fontWeight="400" fontSize="12px" color="#6B7280">{timelineobj.order_packed.desc_text}</Text>
+            <Text marginLeft="-60%" marginTop="-5.8%"  fontWeight="510" fontSize="14px" color="#1F2937">Order Packed</Text>
+            <Text marginLeft="7%"  marginTop="1.5%" fontWeight="400" fontSize="12px" color="#6B7280">{timelineobj.order_packed.desc_text}</Text>
             <Text marginLeft="-73%" marginBottom="10.5%" fontWeight="400" fontSize="12px" color="#6B7280">{timelineobj.order_packed.time}</Text>
         </Center>
         <Center w="90%" h="20" bg="#fff"  borderLeftColor="#C4B5FD" borderLeftStyle="dashed" borderLeftWidth="1px" marginTop="12.28px" >
@@ -44,8 +44,8 @@ export default function OrderTimeline( {timelineobj} ){
                     </AspectRatio>
                 </Box>
             </Box>
-            <Text marginLeft="-70%" marginTop="-7.2%" marginBottom="0%" fontWeight="510" fontSize="14px" color="#9CA3AF">Shipped</Text>
-            <Text marginLeft="-7.1%" marginBottom="0%" marginTop="1.5%" fontWeight="400" fontSize="12px" color="#9CA3AF">{timelineobj.order_shipped.desc_text}</Text>
+            <Text marginLeft="-70%" marginTop="-7.2%"  fontWeight="510" fontSize="14px" color="#9CA3AF">Shipped</Text>
+            <Text marginLeft="-7.1%"marginTop="1.5%" fontWeight="400" fontSize="12px" color="#9CA3AF">{timelineobj.order_shipped.desc_text}</Text>
             <Text marginLeft="-73%" marginBottom="14.5%" fontWeight="400" fontSize="12px" color="#9CA3AF">{timelineobj.order_shipped.time}</Text>
         </Center>
         <Center w="90%" h="20" bg="#fff"  borderLeftColor="#fff"  borderLeftWidth="1px" marginTop="-4.28px" >
@@ -59,8 +59,8 @@ export default function OrderTimeline( {timelineobj} ){
                     </AspectRatio>
                 </Box>
             </Box>
-            <Text marginLeft="-55%"  marginTop="-5.7%" marginBottom="0%" fontWeight="510" fontSize="14px" color="#9CA3AF">Out for Delivery</Text>
-            <Text marginLeft="-38%" marginBottom="0%" marginTop="1.5%" fontWeight="400" fontSize="12px" color="#9CA3AF">{timelineobj.order_ofd.desc_text}</Text>
+            <Text marginLeft="-55%"  marginTop="-5.7%" fontWeight="510" fontSize="14px" color="#9CA3AF">Out for Delivery</Text>
+            <Text marginLeft="-38%"  marginTop="1.5%" fontWeight="400" fontSize="12px" color="#9CA3AF">{timelineobj.order_ofd.desc_text}</Text>
             <Text marginLeft="-73%" marginBottom="14.5%" fontWeight="400" fontSize="12px" color="#9CA3AF">{timelineobj.order_ofd.time}</Text>
         </Center>
     </View>
