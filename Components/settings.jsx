@@ -49,7 +49,7 @@ const data=[
 
 const renderItem = ({item}) => {
     if(item.type === 'MaterialCommunityIcons'){
-        if(item.name === 'Language'){
+        if(item.value === 'Language'){
             return <Button alignItems="center" >
             <Box width="100%" rounded="sm" overflow="hidden" borderColor="coolGray.200" borderWidth="1" bgColor={"white"}>
                 <Stack p="4" space={3}>
@@ -57,7 +57,7 @@ const renderItem = ({item}) => {
                         <Box>
                            <MaterialCommunityIcons name={item.name} size={24} color="black" />
                         </Box>
-                        <Box justifyContent={"space-between"}>
+                        <Box justifyContent="space-between">
                            <Text>{item.value}</Text>
                            <Text>{item.default}</Text>
                         </Box>
