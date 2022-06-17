@@ -10,7 +10,7 @@ const OnePortfolio = ({name, investment, current_value, returns}) => {
                         <Heading size="sm">
                             {name}
                         </Heading>
-                        <Center bg="green.600" width="15%" borderRadius="sm">
+                        <Center bg="green.600" width="20%" borderRadius="sm" padding="1%">
                             <Text style={{color: 'white', marginHorizontal:'5%'}}>SIP x 6</Text>
                         </Center>
                     </Stack>
