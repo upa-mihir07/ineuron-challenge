@@ -32,7 +32,7 @@ function App() {
                         headerTintColor: "#fff",
                         headerTitleStyle: {
                             fontWeight: "500",
-                            fontSize: "18%",
+                            // fontSize: "18%",
                         },
                     }}
                 />
