@@ -24,7 +24,7 @@ import RectBox from "../Components/RectBox";
 function Screen4({ navigation }) {
     return (
         <NativeBaseProvider>
-            <View style={{ paddingTop: 100, paddingBottom: 10 }}></View>
+            <View style={{ paddingTop: "4%", paddingBottom: "4%" }}></View>
             <RectBox />
             <Heading
                 size="sm"

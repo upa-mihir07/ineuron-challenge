@@ -13,24 +13,24 @@ const data=[
     },
     {
         id: '2',
-        name: 'Aditya Birla Sun Life Flexi Cap- Fund',
-        investment: '50000',
-        current_value: '4351.51',
-        returns: '14'
+        name: 'Axis Sun Life Flexi Cap- Fund',
+        investment: '782.01',
+        current_value: '473.85',
+        returns: '12'
     },
     {
         id: '3',
-        name: 'Aditya Birla Sun Life Flexi Cap- Fund',
-        investment: '50000',
-        current_value: '4351.51',
-        returns: '14'
+        name: 'Aditya Birla Blue Chip- Fund',
+        investment: '779.58',
+        current_value: '293.01',
+        returns: '10'
     },
     {
         id: '4',
-        name: 'Aditya Birla Sun Life Flexi Cap- Fund',
-        investment: '50000',
-        current_value: '4351.51',
-        returns: '14'
+        name: 'Kotak Flexi Cap Mutual Fund',
+        investment: '406.27',
+        current_value: '106.58',
+        returns: '15'
     },
     {
         id: '5',
@@ -57,7 +57,7 @@ const data=[
 ]
 
 const renderItem = ({item}) => {
-    return <Example name={item.name}/>
+    return <Example name={item.name} returns={item.returns} current_value={item.current_value} investment={item.investment}/>
 }
 
 const AllPortfolio = () => {
@@ -70,7 +70,7 @@ const AllPortfolio = () => {
                 keyExtractor={ item => item.id}
                 showsVerticalScrollIndicator={false}
                 contentInset={{ right: 20, top: 0, left: 0, bottom: 0 }}
-                contentContainerStyle={{ paddingBottom: 100 }}
+                contentContainerStyle={{ paddingBottom: '2%' }}
                 marginBottom='200'
             />
         </View>
