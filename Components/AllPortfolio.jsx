@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import { FlatList } from "native-base";
-import Example from "./OnePortfolio";
+import OnePortfolio from "./OnePortfolio";
 
 const data=[
     {
@@ -57,23 +57,19 @@ const data=[
 ]
 
 const renderItem = ({item}) => {
-    return <Example name={item.name} returns={item.returns} current_value={item.current_value} investment={item.investment}/>
+    return <OnePortfolio name={item.name} returns={item.returns} current_value={item.current_value} investment={item.investment}/>
 }
 
 const AllPortfolio = () => {
 
     return(
-        <View>
             <FlatList 
                 data={data}
                 renderItem={renderItem}
                 keyExtractor={ item => item.id}
                 showsVerticalScrollIndicator={false}
                 contentInset={{ right: 20, top: 0, left: 0, bottom: 0 }}
-                contentContainerStyle={{ paddingBottom: '2%' }}
-                marginBottom='200'
             />
-        </View>
     )
 }
 

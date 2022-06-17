@@ -1,23 +1,8 @@
 import * as React from "react";
-import { Button, View } from "react-native";
+import { View } from "react-native";
 
-import {
-    NativeBaseProvider,
-    Text,
-    Box,
-    Container,
-    Content,
-    Header,
-    Left,
-    Right,
-    Icon,
-    Item,
-    Input,
-    Card,
-    CardItem,
-    Heading,
-} from "native-base";
-import Example from "../Components/OnePortfolio";
+import { NativeBaseProvider, Heading } from "native-base";
+
 import AllPortfolio from "../Components/AllPortfolio";
 import RectBox from "../Components/RectBox";
 
@@ -36,9 +21,6 @@ function Screen4({ navigation }) {
                 PortFolio Details
             </Heading>
             <AllPortfolio />
-            {/* <Example />
-            <Example />
-            <Example /> */}
         </NativeBaseProvider>
     );
 }

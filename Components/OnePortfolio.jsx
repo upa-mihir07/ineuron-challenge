@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, AspectRatio, Image, Center, Stack, Text, Heading, HStack} from "native-base";
 
-const Example = ({name, investment, current_value, returns}) => {
+const OnePortfolio = ({name, investment, current_value, returns}) => {
     return  (
         <Box alignItems="center" marginBottom={4} >
             <Box width="90%" rounded="sm" overflow="hidden" borderColor="coolGray.200" borderWidth="1" bgColor={"gray.200"}>
@@ -34,7 +34,7 @@ const Example = ({name, investment, current_value, returns}) => {
     );
   };
 
-export default Example;
+export default OnePortfolio;
 
 
 // _dark={{
