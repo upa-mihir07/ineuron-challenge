@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet,} from "react-native";
-import { FlatList,Text, Box, HStack, Stack,View ,Heading, Progress, Button } from "native-base";
+import { FlatList,Text, Box, HStack, Stack,View ,Heading, Progress, Button, Center } from "native-base";
 
 import { MaterialIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Dimensions } from "react-native";
+
 
 const data=[
     {
@@ -104,52 +104,38 @@ const settings = () => {
 
     return(
         <View style={styles.container}>
-            <FlatList 
-                data={data}
-                renderItem={renderItem}
-                keyExtractor={ item => item.id}
-                showsVerticalScrollIndicator={false}
-                contentInset={{ right: 20, top: 0, left: 0, bottom: 0 }}
-                contentContainerStyle={{ paddingBottom: '2%' }}
-                
-            />
-            <Box  padding="2">
-                <Box width="100%" rounded="sm" overflow="hidden" borderColor="coolGray.10" borderWidth="1" bgColor={"white"} padding="3">
-                <Stack p="4" space={3}>
-                <HStack alignItems="center" space={4} justifyContent="space-around">
+            <View>
+                <FlatList 
+                    data={data}
+                    renderItem={renderItem}
+                    keyExtractor={ item => item.id}
+                    showsVerticalScrollIndicator={false}
+                    // contentInset={{ right: 20, top: 0, left: 0, bottom: 0 }}
+                    // contentContainerStyle={{ paddingBottom: '2%' }}  
+                />
+            </View>
+            <Box  padding="5%" flex={1}>
+                <Box width="100%" rounded="sm" overflow="hidden" borderColor="coolGray.10" borderWidth="1" padding="3%">
+                    <HStack alignItems="center" space={4} justifyContent="space-around">
+                        <Box bg={'red'}  flex={1}>
+                            <Box flexDirection="row" paddingBottom='3%'>
+                                <MaterialIcons name="cloud-queue" size={24} color="black" />
+                                <Text marginLeft="3" fontSize="md">
+                                    Storage
+                                </Text>
+                            </Box>
+                            <Box paddingBottom='3%'>
+                                <Progress w="90%" value={25} />
+                            </Box>
+                            <Text fontSize="sm">
+                                4GB of 15GB Used
+                            </Text>
+                        </Box>
 
-                        <Heading size="sm">
-                            <HStack alignItems="center" space={4} justifyContent="flex-start">
-                            <HStack alignItems="center" space={2} justifyContent="flex-start">
-                                <Box>
-                                <Box flexDirection="row" >
-                                    <Box>
-                                        <MaterialIcons name="cloud-queue" size={24} color="black" />
-                                    </Box>
-                                   <Box marginLeft="3">
-                                        Storage
-                                   </Box>
-                                </Box>
-                                <Box marginRight="4"  marginLeft="0">
-                                    <Progress w="150" shadow={2} value={4} mx="15" />
-                                </Box>
-                                <Box>
-                                    4GB of 15GB Used
-                                </Box>
-                                </Box>
-                            </HStack>
-
-                            
-                            </HStack>
-                        </Heading>
-                   
-                <HStack alignItems="center" space={4}>
-                <Button variant="outline" style={styles.buy}>
-                        Buy Storage
+                        <Button variant="outline" style={styles.buy}>
+                            Buy Storage
                         </Button>
-                </HStack>
-                </HStack>
-            </Stack>
+                    </HStack>
                 </Box>
             </Box>
         </View>
@@ -158,12 +144,8 @@ const settings = () => {
 
 const styles = StyleSheet.create({
     container  : {
-        height : "100%",
-        backgroundColor : "#F5F3FF",
-        display : 'flex'
-        
-        
-        
+        height: '100%',
+        backgroundColor : '#F5F3FF', 
     },
     buy : {
         borderColor : '#5B21B6',
