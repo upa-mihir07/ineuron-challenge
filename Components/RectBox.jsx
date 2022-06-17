@@ -14,18 +14,6 @@ const RectBox =() => {
             </Box>
         </HStack>
 
-            // <HStack space={3} justifyContent="center" >
-            //     <Center w="44%" h="40%" bg="primary.400">
-            //         <Box   borderColor="black">
-            //             <Text>Mihir</Text>
-            //         </Box>
-            //     </Center>
-            //     <Center width="44%" height="40%" bg="primary.400">
-            //         <Box borderColor="black">
-            //             <Text>Mihir</Text>
-            //         </Box>
-            //     </Center>
-            // </HStack>
     )
 }
 
