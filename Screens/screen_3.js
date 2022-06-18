@@ -1,8 +1,18 @@
-import * as React from "react";
-import { NativeBaseProvider } from "native-base";
+import React, { useContext, useEffect } from "react";
+
+import darkContext from "../Context/DarkContext";
+import { Button, View, Text } from "react-native";
 
 import OrderDetail from "../Components/OrderDetail";
 function Screen3({ navigation }) {
+    const a = useContext(darkContext);
+    useEffect(() => {
+        navigation.setOptions({
+            headerStyle: {
+                backgroundColor: a.state.headerColor,
+            },
+        });
+    });
     return (
         <NativeBaseProvider>
             <OrderDetail />

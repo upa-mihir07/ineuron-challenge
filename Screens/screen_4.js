@@ -1,4 +1,6 @@
-import * as React from "react";
+import React, { useContext, useEffect } from "react";
+
+import darkContext from "../Context/DarkContext";
 import { Dimensions, View } from "react-native";
 
 import {
@@ -17,11 +19,18 @@ import AllPortfolio from "../Components/AllPortfolio";
 import RectBox from "../Components/RectBox";
 
 function Screen4({ navigation }) {
+    const a = useContext(darkContext);
+    useEffect(() => {
+        navigation.setOptions({
+            headerStyle: {
+                backgroundColor: a.state.headerColor,
+            },
+        });
+    });
     const { colorMode, toggleColorMode } = useColorMode();
-    console.log(toggleColorMode, colorMode);
     navigation.setOptions({
         headerRight: () => (
-            <Button onPress={toggleColorMode} h={10}>
+            <Button onPress={() => toggleColorMode()} h={10}>
                 {colorMode === "light" ? "Dark" : "Light"}
             </Button>
         ),

@@ -8,7 +8,10 @@ import {
     ScrollView,
     Text,
 } from "native-base";
-import * as React from "react";
+
+import React, { useContext, useEffect } from "react";
+
+import darkContext from "../Context/DarkContext";
 import { MaterialIcons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Dimensions } from "react-native";
@@ -45,23 +48,35 @@ const data = {
     ],
 };
 
+let b;
+
 const renderSize = ({ item }) => {
     return (
         <Button
             size="sm"
-            bgColor="#d9d5eb"
+            bgColor={b.state.boxColor2}
             onPress={() => {
                 item.selected = !item.selected;
             }}
             ml={(4 * windowWidth) / 100}
             my={windowHeight / 100}
         >
-            <Text color={"black"}>{item.name}</Text>
+            <Text color={b.state.fontColor}>{item.name}</Text>
         </Button>
     );
 };
 
 function Screen2({ navigation }) {
+    const a = useContext(darkContext);
+    useEffect(() => {
+        navigation.setOptions({
+            headerStyle: {
+                backgroundColor: a.state.headerColor,
+            },
+        });
+    });
+
+    b = a;
     const [selected, SetSelected] = React.useState([3, 0]);
 
     const headerHeight = useHeaderHeight();
@@ -73,12 +88,16 @@ function Screen2({ navigation }) {
 
     return (
         <NativeBaseProvider>
-            <Box height={windowHeight - headerHeight} flex={1}>
+            <Box
+                height={windowHeight - headerHeight}
+                flex={1}
+                bgColor={a.state.bgColor}
+            >
                 <Center mx={(4 * windowWidth) / 100}>
                     <Box
                         borderRadius="md"
                         my={windowHeight / 100}
-                        bg={"#d9d5eb"}
+                        bgColor={b.state.boxColor2}
                         width="100%"
                     >
                         <Box padding={(1 * windowHeight) / 100}>
@@ -96,7 +115,7 @@ function Screen2({ navigation }) {
                     <Text
                         fontSize={"2xl"}
                         mx={(4 * windowWidth) / 100}
-                        color={"black"}
+                        color={a.state.fontColor}
                     >
                         {data.name}
                     </Text>
@@ -111,8 +130,12 @@ function Screen2({ navigation }) {
                             size={24}
                             color={"#FBBF24"}
                         />
-                        <Text>{` ${data.rating}`}</Text>
-                        <Text>{` (${data.reviewCount})`}</Text>
+                        <Text
+                            color={a.state.fontColor}
+                        >{` ${data.rating}`}</Text>
+                        <Text
+                            color={a.state.fontColor}
+                        >{` (${data.reviewCount})`}</Text>
                     </Box>
                 </Box>
                 <Box>
@@ -125,7 +148,11 @@ function Screen2({ navigation }) {
                     </Text>
                 </Box>
                 <Box>
-                    <Text mx={(4 * windowWidth) / 100} fontSize="lg">
+                    <Text
+                        mx={(4 * windowWidth) / 100}
+                        fontSize="lg"
+                        color={a.state.fontColor}
+                    >
                         {data.price}
                     </Text>
                 </Box>
@@ -134,10 +161,17 @@ function Screen2({ navigation }) {
                     justifyContent="space-between"
                     my={windowHeight / 100}
                 >
-                    <Text mx={(4 * windowWidth) / 100}>
-                        Select Size<Text>( Age Group )</Text>
+                    <Text
+                        mx={(4 * windowWidth) / 100}
+                        color={a.state.fontColor}
+                    >
+                        Select Size
+                        <Text color={a.state.fontColor}>( Age Group )</Text>
                     </Text>
-                    <Text mx={(4 * windowWidth) / 100} color="purple.700">
+                    <Text
+                        mx={(4 * windowWidth) / 100}
+                        color={a.state.boxColor1}
+                    >
                         Size Chart
                     </Text>
                 </Box>
@@ -166,6 +200,7 @@ function Screen2({ navigation }) {
                                 onPress={() => {
                                     onchangeSelected(0);
                                 }}
+                                color={a.state.fontColor}
                             >
                                 Description
                             </Text>
@@ -181,6 +216,7 @@ function Screen2({ navigation }) {
                                 onPress={() => {
                                     onchangeSelected(1);
                                 }}
+                                color={a.state.fontColor}
                             >
                                 Reviews
                             </Text>
@@ -197,6 +233,7 @@ function Screen2({ navigation }) {
                                 mx={(4 * windowWidth) / 100}
                                 mt={(2 * windowWidth) / 100}
                                 fontSize={"sm"}
+                                color={a.state.fontColor}
                             >
                                 {data.description}
                             </Text>
@@ -206,6 +243,7 @@ function Screen2({ navigation }) {
                                 mx={(4 * windowWidth) / 100}
                                 mt={(2 * windowWidth) / 100}
                                 fontSize={"sm"}
+                                color={a.state.fontColor}
                             >
                                 {data.review}
                             </Text>
@@ -218,15 +256,15 @@ function Screen2({ navigation }) {
                     mx={(4 * windowWidth) / 100}
                     justifyContent={"space-between"}
                 >
-                    <Button size="sm" bgColor="#d9d5eb" width="15%">
+                    <Button size="sm" bgColor={a.state.boxColor2} width="15%">
                         <MaterialCommunityIcons
                             name="cards-heart-outline"
                             size={24}
-                            color="#4C1D95"
+                            color={a.state.continueBtn}
                         />
                     </Button>
 
-                    <Button size="sm" bgColor={"#4C1D95"} width="80%">
+                    <Button size="sm" color={a.state.continueBtn} width="80%">
                         <Text color={"white"} fontSize="md">
                             Continue
                         </Text>

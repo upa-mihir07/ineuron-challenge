@@ -1,12 +1,21 @@
 import { NativeBaseProvider } from "native-base";
-import * as React from "react";
+import React, { useContext, useEffect } from "react";
+
+import darkContext from "../Context/DarkContext";
 import Settings from "../Components/settings";
 
-
-function Screen1({ navigation }) {
+function Screen1({ navigation, route }) {
+    const a = useContext(darkContext);
+    useEffect(() => {
+        navigation.setOptions({
+            headerStyle: {
+                backgroundColor: a.state.headerColor,
+            },
+        });
+    });
     return (
         <NativeBaseProvider>
-            <Settings/>
+            <Settings />
         </NativeBaseProvider>
     );
 }
