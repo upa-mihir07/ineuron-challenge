@@ -71,12 +71,12 @@ const renderItem = ({item}) => {
             <Box width="100%" rounded="sm" overflow="hidden" borderColor="coolGray.200" borderWidth="1" bgColor={"white"}>
                 <Stack p="4" space={3}>
                     <HStack alignItems="center" space={4} justifyContent="flex-start">
-                        <Box>
+                        <Box width={"10%"}>
                            <MaterialIcons name={item.name} size={24} color="black" />
                         </Box>
-                        <Box flexDirection="row">
-                            <Text>{item.value}</Text>
-                            <Text mx="41%">{item.default}</Text>
+                        <Box flexDirection="row" justifyContent="space-between" width={"90%"}>
+                                <Text>{item.value}</Text>
+                                <Text>{item.default}</Text>
                         </Box>
                     </HStack>
                 </Stack>

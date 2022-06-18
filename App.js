@@ -21,60 +21,59 @@ const Stack = createNativeStackNavigator();
 
 function App() {
     return (
-       <Screen3/>
-        // <NavigationContainer>
-        //     <Stack.Navigator initialRouteName="Home">
-        //         <Stack.Screen 
-        //             name="Screen 1" 
-        //             component={Screen1} 
-        //                 options={{
-        //                     title: "Settings",
-        //                     headerBackTitleVisible: false,
-        //                     headerStyle: {
-        //                         backgroundColor: "#6411B2",
-        //                     },
-        //                     headerTintColor: "#fff",
-        //                     headerTitleStyle: {
-        //                         fontWeight: "500",
-        //                         // fontSize: "18%",
-        //                     },
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Home">
+                <Stack.Screen 
+                    name="Screen 1" 
+                    component={Screen1} 
+                        options={{
+                            title: "Settings",
+                            headerBackTitleVisible: true,
+                            headerStyle: {
+                                backgroundColor: "#6411B2",
+                            },
+                            headerTintColor: "#fff",
+                            headerTitleStyle: {
+                                fontWeight: "500",
+                                // fontSize: "18%",
+                            },
                             
-        //                 }}
-        //             />
-        //         <Stack.Screen name="Screen 2" component={Screen2} />
-        //         <Stack.Screen 
-        //             name="Screen 3" 
-        //             component={Screen3}
-        //             options={{
-        //                 title: "Track Order",
-        //                 headerBackTitleVisible: false,
-        //                 headerStyle: {
-        //                     backgroundColor: "#4C1D95",
-        //                 },
-        //                 headerTintColor: "#fff",
-        //                 headerTitleStyle: {
-        //                     fontWeight: "500",
-        //                 },
-        //             }} />
-        //         <Stack.Screen
-        //             name="Screen 4"
-        //             component={Screen4}
-        //             options={{
-        //                 title: "Mutual Fund Portfolio",
-        //                 headerBackTitleVisible: false,
-        //                 headerStyle: {
-        //                     backgroundColor: "#6411B2",
-        //                 },
-        //                 headerTintColor: "#fff",
-        //                 headerTitleStyle: {
-        //                     fontWeight: "500",
-        //                     // fontSize: "18%",
-        //                 },
-        //             }}
-        //         />
-        //         <Stack.Screen name="Screen 5" component={Screen5} />
-        //     </Stack.Navigator>
-        // </NavigationContainer>
+                        }}
+                    />
+                <Stack.Screen name="Screen 2" component={Screen2} />
+                <Stack.Screen 
+                    name="Screen 3" 
+                    component={Screen3}
+                    options={{
+                        title: "Track Order",
+                        headerBackTitleVisible: false,
+                        headerStyle: {
+                            backgroundColor: "#4C1D95",
+                        },
+                        headerTintColor: "#fff",
+                        headerTitleStyle: {
+                            fontWeight: "500",
+                        },
+                    }} />
+                <Stack.Screen
+                    name="Screen 4"
+                    component={Screen4}
+                    options={{
+                        title: "Mutual Fund Portfolio",
+                        headerBackTitleVisible: false,
+                        headerStyle: {
+                            backgroundColor: "#6411B2",
+                        },
+                        headerTintColor: "#fff",
+                        headerTitleStyle: {
+                            fontWeight: "500",
+                            // fontSize: "18%",
+                        },
+                    }}
+                />
+                <Stack.Screen name="Screen 5" component={Screen5} />
+            </Stack.Navigator>
+        </NavigationContainer>
     );
 }
 
