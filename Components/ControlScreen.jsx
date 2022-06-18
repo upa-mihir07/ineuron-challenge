@@ -61,7 +61,7 @@ const ControlScreen = ({navigation}) => {
         )
     }
     return (
-        <>
+        <Box height='100%' width='100%' bg={a.state.bgColor}>
             <Toggle />
             <Box mt={windowHeight/25} width='100%' >
                 <FlatList 
@@ -69,7 +69,7 @@ const ControlScreen = ({navigation}) => {
                     renderItem={renderItem}
                 />
             </Box>
-        </>
+        </Box>
     )
 }
 
