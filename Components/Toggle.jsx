@@ -5,8 +5,6 @@ import darkContext from "../Context/DarkContext";
 
 const Toggle = () => {
     const a = useContext(darkContext);
-    console.log(a.state)
-    console.log("HimaniMihir Rocks bsdk", a.state);
 
     const [isDark, setIsDark] = useState(false)
 

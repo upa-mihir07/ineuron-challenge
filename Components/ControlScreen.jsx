@@ -32,7 +32,7 @@ const data = [
     {
         id: '5',
         name: 'Screen 5', 
-        screen_name: 'Settings'
+        screen_name: 'My Cart'
     },
 ]
 
