@@ -5,8 +5,8 @@ const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 export default function OrderTimeline( {timelineobj} ){
-    return <View flexDirection={"column"}>
-        <Center width={windowWidth} height={"20%"} bgColor={"#fff"} marginBottom={windowHeight/50}>
+    return <View flexDirection={"column"} width='95%' justifyContent={'center'}>
+        <Center width={"95%"} height={"20%"} bgColor={"#fff"} marginBottom={windowHeight/50}>
             <Box flexDirection={"row"} justifyContent="space-around" rounded="100%" marginLeft={windowWidth/10} marginRight={"20%"} >
                 <Box width={"25%"}  margin={"auto"}>
                     <Image source={require('./../assets/done.png')} alt="image" />

@@ -4,6 +4,7 @@ import darkContext from "../Context/DarkContext";
 import { Button, View, Text } from "react-native";
 
 import OrderDetail from "../Components/OrderDetail";
+import { NativeBaseProvider } from "native-base";
 function Screen3({ navigation }) {
     const a = useContext(darkContext);
     useEffect(() => {

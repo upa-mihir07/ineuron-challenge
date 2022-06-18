@@ -47,7 +47,7 @@ function App() {
                         />
                         <Stack.Screen name="Settings" component={Screen1} />
                         <Stack.Screen name="Body Suit" component={Screen2} />
-                        <Stack.Screen name="Screen 3" component={Screen3} />
+                        <Stack.Screen name="Track Order" component={Screen3} />
                         <Stack.Screen
                             name="Mutual Fund Portfolio"
                             component={Screen4}
