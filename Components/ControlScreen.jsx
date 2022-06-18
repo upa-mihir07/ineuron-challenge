@@ -22,7 +22,7 @@ const data = [
     {
         id: '3',
         name: 'Screen 3',
-        screen_name: 'Settings'
+        screen_name: 'Track Order'
     },
     {
         id: '4',
