@@ -1,17 +1,12 @@
 import * as React from "react";
-import { Button, View, Text } from "react-native";
+import { NativeBaseProvider } from "native-base";
 
+import OrderDetail from "../Components/OrderDetail";
 function Screen3({ navigation }) {
     return (
-        <View
-            style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-        >
-            <Text>Screen3</Text>
-            <Button
-                title="Go to Screen 4"
-                onPress={() => navigation.navigate("Screen 4")}
-            />
-        </View>
+        <NativeBaseProvider>
+            <OrderDetail />
+        </NativeBaseProvider>
     );
 }
 
