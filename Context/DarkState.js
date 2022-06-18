@@ -17,7 +17,6 @@ const DarkState = (props) => {
     };
     const [state, setState] = useState(s1);
     const onToggle = () => {
-        console.log("Ruchi");
         setState((prev) => ({
             colorMode: prev.colorMode === "light" ? "dark" : "light",
             headerColor: prev.headerColor === "#6411B2" ? "#111827" : "#6411B2",

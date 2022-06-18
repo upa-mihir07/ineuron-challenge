@@ -52,7 +52,7 @@ function App() {
                             name="Mutual Fund Portfolio"
                             component={Screen4}
                         />
-                        <Stack.Screen name="Screen 5" component={Screen5} />
+                        <Stack.Screen name="My Cart" component={Screen5} />
                     </Stack.Navigator>
                 </NativeBaseProvider>
             </DarkState>
