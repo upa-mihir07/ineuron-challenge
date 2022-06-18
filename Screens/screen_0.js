@@ -2,9 +2,9 @@ import { NativeBaseProvider } from "native-base";
 import React, { useContext, useEffect } from "react";
 
 import darkContext from "../Context/DarkContext";
-import Settings from "../Components/settings";
+import ControlScreen from "../Components/ControlScreen";
 
-function Screen1({ navigation, route }) {
+const Screen0 = ({ navigation, route }) => {
     const a = useContext(darkContext);
     useEffect(() => {
         navigation.setOptions({
@@ -15,9 +15,9 @@ function Screen1({ navigation, route }) {
     });
     return (
         <NativeBaseProvider>
-            <Settings />
+            <ControlScreen navigation={navigation} />
         </NativeBaseProvider>
     );
-}
+};
 
-export default Screen1;
+export default Screen0;
