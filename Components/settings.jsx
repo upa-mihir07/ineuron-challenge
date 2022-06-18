@@ -75,6 +75,7 @@ const renderItem = ({item}) => {
             <Box width="100%" overflow="hidden" borderColor="coolGray.200" bgColor={b.state.bgColor}>
                 <Stack p="4" space={3}>
                     <HStack alignItems="center" space={4} justifyContent="flex-start">
+
                         <Box>
                            <MaterialIcons name={item.name} size={24} color={b.state.fontColor} />
                         </Box>
